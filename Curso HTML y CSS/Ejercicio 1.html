@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagina 1</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			color: red;
+		}
+		#contenedor1{
+			background: red;
+			display: none;
+		}
+		
+		#etiqueta{
+			width: 1000px!important;
+			display: inline;
+		}
+		table{
+			margin-top: 10px;
+			width: 50%;
+			margin: auto;
+		}
+			/*multiselectores*/
+			table input{
+				border: none;
+				background: none;
+
+			}
+			table label{
+				margin-left: 2px;
+			}
+			table #Enviar{
+				background: red;
+			}
+		 		table #Enviar:hover{
+					background: blue;
+				}
+	</style>
+</head>
+<body>
+	<h1>Pagina 1</h1>
+	<div id="contenedor1">
+		<button>boton</button>
+	</div>
+	<div>
+		<div id="etiqueta">
+			<label>Nombre</label>
+		</div>
+		<input type="text" name="" placeholder="ingrese un nombre">
+	</div>
+	<div>
+		<label>Edad</label>
+		<input type="number" name="" placeholder="ingrese su Edad">
+	</div>
+	<div id="contenedor1">
+		<button>boton</button>
+		<input type="text" name="" placeholder="ingrese un nombre">
+		<input type="number" name="" value="8">
+		<input type="radio" name="grupo" checked="">
+		<input type="radio" name="grupo" checked="">
+		<input type="checkbox" id="" name="">
+	</div>
+	<table border="1">
+		<tr>
+			<td>
+				<label>Nombre</label>
+			</td>
+			<td>
+				<input id="nombre" type="text" name="" placeholder="ingrese un nombre">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Edad</label>
+			</td>
+			<td>
+				<input id="edad" type="number" name="" placeholder="ingrese su Edad">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input id="Enviar" type="button" name="" value="boton2"> 
+			</td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+	document.getElementById("Enviar").addEventListener("click", function( event ) {
+		var nombre = document.getElementById("nombre").value;
+		var edad = document.getElementById("edad").value;
+		alert("mi nombre es " + nombre + " y tengo " + edad + " años.")
+	}, false);
+</script>
+</html>

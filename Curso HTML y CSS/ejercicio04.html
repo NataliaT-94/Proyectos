@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+
+		.flexbox{
+			display:flex;
+			
+		}
+
+		.ancho50{
+			width: 50%;
+			
+		}
+		.alto100{
+			height: 100%;
+			
+		}
+		.alto50{
+			height: 50%;
+		}
+
+		.rojo{
+			background: red;	
+		}
+		.azul{
+				
+			background: blue;	
+		}
+		.verde{
+			background: green;
+				
+		}
+		.amarillo{
+			background: yellow;
+				
+		}
+		.gris{
+			background: grey;
+				
+		}
+		.negro{
+			background: black;
+				
+		}
+
+		.Trojo{
+			color: red;	
+		}
+		.Tazul{
+				
+			color: blue;	
+		}
+		.Tverde{
+			color: green;
+				
+		}
+		.Tamarillo{
+			color: yellow;
+				
+		}
+		.Tgris{
+			color: grey;
+				
+		}
+		.Tnegro{
+			color: black;
+				
+		}
+		.Tblanco{
+			color: white;
+				
+		}
+
+		.sombraInterior{
+			text-shadow: 3px 3px 2px black;
+		}
+
+		#contenedor{
+			width: 70%;
+			background: grey;
+			height: 400px!important;
+			margin: auto;
+			border-radius: 20px;
+		}
+			#contenedor #cabezero{
+				height: 80px;
+				background: blue;
+			}
+				#contenedor #cabezero .avatar{
+					margin: 10px;
+					border-radius: 5px;
+					box-shadow: 3px 3px 1px 0px rgba(0,0,0,0.45);
+					width: 60px;
+					height: 60px;
+				}
+					#cabezero .avatar .textoAvatar{
+						text-align: center;
+						margin: 0;
+						line-height: 60px;
+						font-size: 50px;
+					}
+			#contenedor #detalle{
+				background: red;
+				height: 80px;
+
+			}
+			#contenedor #contenido{
+				background: green;
+				height: 240px;
+
+			}
+	</style>
+</head>
+<body>
+	<div id="contenedor">
+		<div id="cabezero" class="flexbox">
+			<div class="ancho50 verde alto100 flexbox">
+				<img src="imagenes/descarga.jpg" class="avatar">
+				<h1>Gaara</h1>
+			</div>
+			<div class="ancho50 amarillo alto100 flexbox">
+				<div class="avatar">
+					<h1 class="textoAvatar sombraInterior Tblanco">A</h1>
+				</div>
+				<div class="avatar">
+					<h1 class="textoAvatar sombraInterior Tblanco">B</h1>
+				</div>
+				<div class="avatar">
+					<h1 class="textoAvatar sombraInterior Tblanco">C</h1>
+				</div>
+			</div>
+		</div>
+		<div id="detalle">b</div>
+		<div id="contenido">c</div>
+	</div>
+</body>
+</html>

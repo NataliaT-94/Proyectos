@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="500"/>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+	<title>Sabaku no Gaara</title>
+</head>
+<body>
+	<div id="cajaheader"></div>
+	<div id="principal" itempscope itemtype="http://www.data-vocabulary.org/Person">
+		<header>
+			<div id="logo"></div>
+			<h1><span itemprop="name">Sabaku no Gaara</span></h1>
+			<h2><span itemprop="title">Katzekague de la aldea de la Arena</span></h2>
+			<nav>
+				<ul>
+					<li>
+						<canvas id="inicio" width="100" height="100" style="border:1px solid black;"><i class="fas fa-user-ninja"></i></canvas>
+						<a href="index.html">Inicio</a>
+					</li>
+					<li>
+						<canvas id="informacion" width="100" height="100" style="border:1px solid black;"></canvas>
+						<a href="informacio.html">Informacion</a>
+					</li>
+					<li>
+						<canvas id="nivel" width="100" height="100" style="border:1px solid black;"></canvas>
+						<a href="nivel.html">Nivel</a>
+					</li>
+					<li>
+						<canvas id="bijou" width="100" height="100" style="border:1px solid black;"></canvas>
+						<a href="bijou.html">Bijou</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="contenido">
+			<section>
+				<span itemprop="photo"><img src="imagen/gaara.jpg" width="50px" height="50px">
+				</span>
+				Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen Breve Resumen
+			</section>
+			<aside>
+				<h5>Post Previo</h5>
+				<ul>
+					<li>
+						<a href="">Primera aparicion / Capitulo 35</a>
+					</li>
+					<li>
+						<a href="">Primera aparicion / Capitulo 35</a>
+					</li>
+					<li>
+						<a href="">Primera aparicion / Capitulo 35</a>
+					</li>
+					<li>
+						<a href="">Primera aparicion / Capitulo 35</a>
+					</li>
+				</ul>
+			</aside>
+			<section>
+				<article>
+					<h3>Titulo del post</h3>
+					<h4>Subtitulo del post</h4>
+					<p>contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo</p>
+				</article>
+				<article>
+					<h3>Titulo del post</h3>
+					<h4>Subtitulo del post</h4>
+					<p>contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo</p>
+					<video controls="controls" width="300px" height="150px" preload="preload">
+						<source src="" type="">
+							Tu navegador no soporta video. Haz clic <a href="">AQUI</a> para descargar
+					</video>
+				</article>
+				<article>
+					<h3>Titulo del post</h3>
+					<h4>Subtitulo del post</h4>
+					<p>contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo contenido del articulo</p>
+					<audio src="audio/" controls="controls">
+						Tu navegador no soporta audio. Haz clic <a href="">AQUI</a> para descargar
+					</audio>
+				</article>
+			</section>
+		</div>
+		<footer>
+			<h6>
+				<div class="Vcard">
+					<div><span class="name">Natt Techeira
+					</span></div>
+				</div>
+			</h6>
+			<script type="text/javascript">
+				if (localStorage.pagecount){localStorage.pagecount = Number(localStorage.pagecount)+1;}else {
+					localStorage.pagecount = 1;
+				}
+				document.write("Has visitado mi pagina " + localStorage.pagecount + " veces");
+				if (sessionStorage.pagecount){sessionStorage.pagecount = Number(sessionStorage.pagecount)+1;}else {
+					sessionStorage.pagecount = 1;
+				}
+				document.write("En esta seskion has visitado mi pagina " + sessionStorage.pagecount + " veces");
+			</script>
+		</footer>
+	</div>
+	
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var c=document.getElementById("nivel");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=("Black");
+	cxt.beginPath();
+	cxt.arc(50,25,20,0,Mach.PI*2,true);
+	cxt.closePath();
+	cxt.fill();
+
+	cxt.fillStyle=("Black");
+	cxt.beginPath();
+	cxt.arc(50,90,40,Mach.PI,Mach.PI*2,true);
+	cxt.closePath();
+	cxt.fill();
+</script>
