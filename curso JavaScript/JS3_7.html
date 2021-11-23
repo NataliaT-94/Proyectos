@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>JS Arrays</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				
+			</div>
+		</div>
+	</div>
+	<script>
+		var numeros =[1,2,5,8,9,7] ;
+		var frutas = ['naranja' , 'platano' , 'pera' , 'manzana'];
+		var listado = new Array();
+		var elemento;
+		var versionTexto;
+		var versionArray;
+		var SEPARADOR = '---------------------'
+
+		console.log('Numeros: ' + numeros);
+		console.log('Frutas: ' + frutas);
+		console.log(SEPARADOR);
+
+		console.log('Primer numero: ' + numeros[0]);	
+		console.log('Tercera fruta: ' + frutas[2]);
+		console.log('Cantidad de frutas: ' + frutas.length);
+		console.log('Posicion de la manzana: ' + frutas.indexOf('manzana'));
+		console.log(SEPARADOR);
+		
+
+		numeros.push(4);
+		console.log('Tras insertar: ' + numeros);
+
+		elemento = 'granada';
+		frutas.push(elemento);
+		console.log('Tras insesrtar: ' + frutas);
+
+		elemento = numeros.pop();
+		console.log('Tras eliminar: ' + numeros);
+		console.log('Numero sacado: ' + elemento);
+
+		elemento = frutas.pop();
+		console.log('Tras eliminar: ' + frutas);
+		console.log('Fruta sacada: ' + elemento);
+		console.log(SEPARADOR);
+
+		numeros[1] = 3;
+		console.log('Segundo numero cambiado por el 3: ' + numeros);
+		console.log(SEPARADOR);
+
+		numeros.sort();
+
+		frutas.sort();
+		frutas.reverse();
+
+		console.log('Numeros ordenados: ' + numeros);
+		console.log('Frutas ordenados inverso: ' + frutas);
+		console.log(SEPARADOR);
+
+		listado = frutas.slice(0,2);
+		console.log('Corte de frutas: ' + listado);
+		listado = numeros.concat(frutas);
+		console.log('Concatenacion de numeros y frutas: ' + listado);
+
+		versionTexto = listado.join('*');
+		console.log('Version texto: ' + versionTexto);
+		versionArray = versionTexto.split('*');
+		console.log('Version array: ' + versionArray);
+		
+	</script>
+
+</body>
+</html>

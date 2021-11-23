@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>JS Operaciones con datos de texto</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				
+			</div>
+		</div>
+	</div>
+	<script>
+		var inicio = "En un lugar de la Mancha...";
+		var fin = "de cuyo nombre no quiero acordarme...";
+		var completa = inicio + fin;
+
+		console.log('principio original: '+inicio);
+		console.log('Mayusculas: '+inicio.toUpperCase());
+		console.log('Minusculas: '+inicio.toLowerCase());
+		console.log('Letra posicion 3: '+inicio.charAt(3));
+		console.log('Posicion palabra "lugar": '+inicio.indexOf('lugar'));
+		console.log('Extraccion "En": '+inicio.substring(0,2));
+		console.log('Completa: '+completa);
+	</script>
+
+</body>
+</html>

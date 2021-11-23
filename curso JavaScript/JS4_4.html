@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>JS Estructuras de control: for</title>
+	<style type="text/css" media="screen">
+		.destacado {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="nombre">Estructuras de control. Interativa</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<ul id="menu" class="list-inline">
+					<li class="seleccionado">Primero</li>
+					<li>SEgundo</li>
+					<li>Tercero</li>
+					<li>Cuarto</li>
+				</ul>
+		</div>
+	</div>
+	
+	<script>
+		var elemento;
+		var i;
+		var longitud;
+
+
+		elemento = document.querySelectorAll('#menu>li');
+		i = 0;
+		longitud = elemento.length;
+
+		for (i=0; i<longitud; i++) {
+			elemento[i].style.fontSize = '20px';
+		}
+
+	
+	</script>
+
+</body>
+</html>
