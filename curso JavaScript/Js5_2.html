@@ -13,22 +13,41 @@
 
 			<div class="col-xs-12">
 				<p>Las funciones se empllean para reutilizar fragmentos de codigo que son aplicanles a diferentes partes del programa, aunque con difenentes valores, exponen la misma funcionalidad.</p>
+				<ul id="menu-A" class="list-inline">
+					<li>Primero</li>
+					<li class="seleccionado">Segundo</li>
+					<li>Tercero</li>
+					<li>Cuarto</li>
+				</ul>
+				<ul id="menu-B" class="list-inline">
+					<li class="seleccionado">Primero</li>
+					<li>Segundo</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 	
+	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script>
-		function saludar (nombre){
-			console.log('Hola '+nombre+'.');
-		}
-		function CalcularAreaRectangulo (base, altura){
-			console.log('El area es '+(base + altura));
+		function estilizarMenu (menu) {
+			var longitud;
+			var i;
+			var tamanoBase = 12;
+			var colores = ['red', 'blue', 'green', 'yellow'];
+			var elementos;
+
+			elementos = document.querySelectorAll(menu+'>li');
+			longitud = elementos.length;
+			for (i=0; i<longitud; i++) {
+				elementos[i].style.color = colores[i];
+				elementos[i].style.fontSize = tamanoBase + i*2 + 'px';
+				elementos[i].style.fontWeight = 'bold';
+			}
 		}
 
-
-		saludar('Marcos');
-		CalcularAreaRectangulo(2,4);
+		estilizarMenu( '#menu-A');
+		estilizarMenu( '#menu-B');
 
 	</script>
 
