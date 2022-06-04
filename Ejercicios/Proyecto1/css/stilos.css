@@ -1,0 +1,387 @@
+/*Fuentes presonalizadas*/
+
+@font-face{
+	font-family: ubuntuReglar;
+	src: url(fuentes/UbuntuMono-Regular.ttf) format('truetype');
+}
+@font-face{
+	font-family: ubuntuItalic;
+	src: url(fuentes/UbuntuMono-Italic.ttf) format('truetype');
+}
+@font-face{
+	font-family: ubuntuBold;
+	src: url(fuentes/UbuntuMono-Bold.ttf) format('truetype');
+}
+@font-face{
+	font-family: ubuntuBoldItalic;
+	src: url(fuentes/UbuntuMono-BoldItalic.ttf) format('truetype');
+}
+
+/*Estlos Basicos*/
+
+h1,h2,h3,h4,h5,h6{
+	font-family: ubuntuBold;
+	text-align: left;
+}
+
+h1{
+	color: white;
+	font-size: 36px;
+	top: -20;
+	margin-top: 10px;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+h2{
+	color: white;
+	font-size: 16px;
+	top: -20;
+	margin-top: 10px;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h3{
+	margin: 0px;
+	padding: 0px;
+	font-size: 36px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h4{
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/*h1,h2{
+	transform: translate(150px 0px);
+	position: center;
+	color: white;
+	font-size: 45px;
+	top: -20%;
+	margin-top: 10px;
+	letter-spacing: 5px;
+	display: table;
+	text-shadow: 5px 5px 5px black;
+}*/
+
+p{
+	font-family: ubuntuRegular;
+	font-size: 12px;
+	text-align: justify;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+/*Menu de navegación*/
+
+nav{
+	display: inline;
+	float: right;
+	margin: 20px;
+}
+
+nav ul{
+	font-size: 15px;
+	padding-left: 0px;
+	margin-left: 0px;
+	background-color: grey;
+	color: white;
+	font-family: ubuntuRegular;
+	position: relative;
+	display: inline;
+}
+nav ul li{
+	display: inline;
+	text-align: center;
+}
+
+nav ul li a {
+	width: 70px;
+	height: 50px;
+	padding: 20px 0px 0px 0px;
+	background: grey;
+	color: black;
+	text-decoration: none;
+	float: right;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 0px 0px 5px white;
+}
+
+nav ul li a:hover{
+	background: white;
+	color: black;
+	box-shadow: 0px 0px 25px white;
+	width: 80px;
+}
+
+/*Maquetacion principal*/
+
+body{
+	text-align: center;
+	margin: 0px;
+	background: lightgray;
+	background: url('../foto/fondoFiat.jpg');
+}
+
+#Princial{
+	text-align: left;
+	margin: auto;
+	width: 80%;
+	height: 100%;
+	/*background: grey;*/
+	position: relative;
+}
+
+#cajaHeader{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.5);
+
+}
+
+header{
+	display: table;
+	margin: auto;
+	text-align: left;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.5);
+
+	border: 2px solid white;
+	border-radius: 5px 35px 0px 0px;
+	box-shadow: 0px 0px 10px white;
+}
+
+footer{
+	display: table;
+	margin: 0px;
+	text-align: center;
+	padding: 0px;
+	width: 100%;
+	border: 2px solid white;
+	background: rgba(0, 0, 0, 0.5);
+	border: 2px solid white;
+	border-radius: 0px 0px 5px 35px;
+	box-shadow: 0px 0px 10x white;
+}
+
+/*ontenido*/
+
+#contenido{
+	width: 100%;
+	border: 2px solid white;
+	border-radius: 0px 0px 5px 35px;
+	box-shadow: 0px 0px 10x white;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+article{
+	width: 50%;
+	/*background: white;*/
+	background: rgba(255, 255, 255, 0);
+	margin: 10px;
+	height: 100%;
+	display: table;
+	border: 1px solid white;
+	border-radius: 0px 25px 0px 25px;
+	box-shadow: 3px 3px 10px black;
+	padding: 10px 10px 10px 300px;
+	opacity: 0.5;
+	transform: scale(1,1);
+	transition: opacity 1s, box-shadow 1s, transform 1s, backgroun 1s;
+}
+
+
+time{
+	font-family: ubuntuRegular;
+	font-size: 10px;
+
+}
+article:hover{
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 25px white;
+	opacity: 1;
+	transform: scale(1.1, 1.1);
+}
+
+aside{
+	float: right;
+	display: online-tabe;
+	width: 20%;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 0px 25px 0px 25px;
+	box-shadow: 3px 3px 10px black;
+}
+
+aside ul{
+	width: 100%;
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	color: white;
+	float: left;
+	font-family: ubuntuRegular;
+	font-size: 10px;
+	text-decoration: none;
+	list-style: none;
+}
+
+aside ul li{
+	width: 100%;
+	text-decoration: none;
+	border: 1px solid white;
+	border-radius: 0px 5px 0px 5px;
+	text-decoration: none;
+}
+
+aside ul li a{
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+#Informacion{
+	width: 100%;
+	height: 100%;
+	background: black;
+	color: white;
+	font-size: 10px;
+	text-decoration: none;
+	text-align: justify;
+}
+
+#logo{
+	width: 200px;
+	height: 100px;
+	font-family: ubuntuBold;
+	font-size: 20px;
+	color: white;
+	text-align: left;
+
+	background: url('../foto/Logo1.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: box;
+	float: left;
+	margin: 10px;
+}
+
+#cronos{
+	width: 200px;
+	height: 100px;
+	font-family: ubuntuBold;
+	font-size: 20px;
+	color: white;
+	text-align: left;
+
+	background: url('../foto/FiatCronosS-Design.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: box;
+	float: left;
+	margin: 10px ;
+
+	border: 1px solid white;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 0px 0px 10px white;
+
+	position: absolute;
+	transform: translate(-140px, 0px);
+}
+
+#fiorino{
+	width: 200px;
+	height: 100px;
+	font-family: ubuntuBold;
+	font-size: 20px;
+	color: white;
+	text-align: left;
+
+	background: url('../foto/fiatFiorino.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: box;
+	float: left;
+	margin: 10px;
+
+	border: 1px solid white;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 0px 0px 10px white;
+
+	position: absolute;
+	transform: translate(-140px, 0px);
+}
+
+#pulse{
+	width: 200px;
+	height: 100px;
+	font-family: ubuntuBold;
+	font-size: 20px;
+	color: white;
+	text-align: left;
+
+	background: url('../foto/fiatPulse.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: box;
+	float: left;
+	margin: 10px;
+
+	border: 1px solid white;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 0px 0px 10px white;
+
+	position: absolute;
+	transform: translate(-140px, 0px);
+}
+
+[required]{
+	border-color: green;
+	box-shadow: 0px 0px 5px green;
+}
+
+:invalid{
+	border-color: red;
+	box-shadow: 0px 0px 5px red;
+}
+
+form table{
+	width: 100px;
+	border: 0px solid white;
+	padding: 0px;
+	margin: auto;
+}
+
+form{
+	font-family: ubuntuRegular;
+	color: black;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	border: 1px solid white;
+	border-radius: 0px 15px 0px 15px;
+	box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+	background: rgba(255, 255, 255, 0.5);
+	margin: auto;
+	width: 80%;
+	padding: 10px;
+
+}
+
+form input, form textarea{
+	font-size: 10px;
+	font-family: ubuntuRegular;
+	background: rgba(255, 255, 255, 0.5);
+	border: 1px dotted white;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 0px 5px 0px 5px;
+
+}

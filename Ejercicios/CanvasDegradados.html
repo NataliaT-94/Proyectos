@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<canvas id="gradiente" width="400px" height="400px" style="border:1px solid black;">
+			tu navegador no soporta canvas
+		</canvas>
+
+		<script type="text/javascript">
+			var c=document.getElementById("gradiente");
+			var ctx=c.getContext("2d");
+
+			var grd=ctx.createLinearGradient (0,0,400,400);
+
+			grd.addColorStop(0,"white");
+			grd.addColorStop(0.25,"Green");
+			grd.addColorStop(0.5,"Red");
+			grd.addColorStop(0.75,"Blue");
+			grd.addColorStop(1,"Black");
+
+			ctx.fillStyle=grd;
+			ctx.fillRect(0,0,400,400);
+		</script>
+	</body>
+</html>

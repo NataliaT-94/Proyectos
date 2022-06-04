@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<canvas id="logotipo" width="120px" height="120px" style="border:1px solid black;">
+			tu navegador no soporta canvas
+		</canvas>
+
+		<script type="text/javascript">
+			var c=document.getElementById("logotipo");
+			var ctx=c.getContext("2d");
+
+			ctx.fillStyle="Green";
+			ctx.beginPath();
+			ctx.arc(60,60,50,0,Math.PI*2,true); 
+			ctx.closePath;
+			ctx.fill();
+
+			ctx.fillStyle="White";
+			ctx.beginPath();
+			ctx.arc(60,60,30,0.75*Math.PI,Math.PI*2,true); 
+			ctx.closePath;
+			ctx.fill();
+
+			ctx.fillStyle="White";
+			ctx.beginPath();
+			ctx.arc(70,40,10,Math.PI,Math.PI*2,false); 
+			ctx.closePath;
+			ctx.fill();
+
+			ctx.fillStyle="White";
+			ctx.beginPath();
+			ctx.arc(40,50,10,1.8*Math.PI,0.8*Math.PI,true); 
+			ctx.closePath;
+			ctx.fill();
+
+
+		</script>
+	</body>
+</html>
