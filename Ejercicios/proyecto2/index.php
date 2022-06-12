@@ -215,20 +215,26 @@
             table:hover{
                 transform: scale(1.1, 1.1);
             }
-            
-            table th{
-                text-align: left;
-                width: 100%;
-                font-family: ubuntuB;
+
+            table thead{
                 border: 1px solid rgba(0, 0, 0, 0.5);
                 border-radius: 10px;
                 background: rgba(212, 184, 131, 0.5);
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+            }
+            
+            table th{
+                text-align: left;
+                width: 50%;
+                padding-left: 5px;
+                font-family: ubuntuB;
             }
             
             table td{
                 border: 1px solid white;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                padding-left: 5px;
 
             }
             
@@ -278,132 +284,74 @@
                     </section>
                 </section>
                 <section id="etiquetas">
-                    <table border="1">
-                        <tr>
-                            <th>Titulo<span id="estrellas">Valoracion</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Enlace
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Categoria
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Comentario
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="1">
-                        <tr>
-                            <th>Titulo<span id="estrellas">Valoracion</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Enlace
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Categoria
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Comentario
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="1">
-                        <tr>
-                            <th>Titulo<span id="estrellas">Valoracion</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Enlace
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Categoria
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Comentario
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="1">
-                        <tr>
-                            <th>Titulo<span id="estrellas">Valoracion</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Enlace
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Categoria
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Comentario
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="1">
-                        <tr>
-                            <th>Titulo<span id="estrellas">Valoracion</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Enlace
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Categoria
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Comentario
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="1">
-                        <tr>
-                            <th>Titulo<span id="estrellas">Valoracion</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Enlace
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Categoria
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Comentario
-                            </td>
-                        </tr>
-                    </table>
+                    
+                    <?php
+                    $enlace = mysqli_connect("localhost", "root", "", "gestionfiat");
+
+                    if (!$enlace) {
+                        echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+                        echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+                        echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+                        exit;
+                    }
+
+                    //echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
+                    //echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
+
+                    $sql = "SELECT * FROM `turnos_registros`";
+                    $resultado = mysqli_query($enlace, $sql);
+                    if(!$resultado) {
+                        echo mysqli_error($enlace);
+                    }else{
+                        //echo "Bien";
+                    }
+
+                    while ($row = mysqli_fetch_assoc($resultado)) {
+                        echo '
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        REGISTRO
+                                    </th>
+                                    <th>
+                                        '.$row["REGISTRO"].'
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        TITULAR
+                                    </td>
+                                    <td>
+                                        '.$row["TITULAR"].'
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        FECHA
+                                    </td>
+                                    <td>
+                                        '.$row["FECHA"].'
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        HORA
+                                    </td>
+                                    <td>
+                                        '.$row["HORA"].'
+                                    </td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                        ';
+                    }
+
+                    mysqli_close($enlace);
+                    ?>
                     <section id="trampa">
                         -
                     </section>
