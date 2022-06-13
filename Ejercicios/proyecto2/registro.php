@@ -35,9 +35,9 @@
             #tipo{
                 width: 100%;
                 position: absolute;
-                margin-top: 40px;
+                margin: 0px;
                 padding: 0px;
-                font-size: 30px;
+                font-size: 48px;
                 color: rgba(255, 0, 0, 1);
                 text-align: center;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -235,6 +235,10 @@
                 padding-left: 5px;
                 font-family: ubuntuB;
             }
+
+            table tr{
+                height: 30px;
+            }
             
             table td{
                 border: 1px solid white;
@@ -264,22 +268,22 @@
                         
                     </div>
                     <div id="tipo">
-                        <h1>Hoja de Ruta</h1> 
+                        <h1>Crear cuenta</h1> 
                     </div>
                 </section>
-                <section id="login">
+                <!-- <section id="login">
                     <form>
                         <input type="text" name="usuario" value="usuario" size="20">
                         <input type="text" name="contraseña" value="contraseña" size="20">
                         <input type="submit">
                     </form>
-                    <div id="registrate"><a href="registro.php">Pulse AQUI para registrarte en la web</a></div>
-                </section>
+                    <div id="registrate"><a href="">Pulse AQUI para registrarte en la web</a></div>
+                </section> -->
                 
 
             </header>
             <section id="contenido">
-                <section id="contenido">
+                <!-- <section id="contenido">
                     <section id="presentacion">
                         <div id="animacionTexto1">
                             <h2>Cansad@ de perder tus registros?</h2> 
@@ -288,120 +292,93 @@
                             <h2>Te gustaria no volver a perderlos?</h2>
                         </div>
                     </section>
-                </section>
+                </section> -->
                 <section id="etiquetas">
+                <table border="1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Informacion personal
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Nick
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contrasena
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nombres
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Apellidos
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Edad
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    &nbsp;
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="nicks" value="" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="contrasena" value="" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="nombres" value="" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="apellidos" value="" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="number" name="edad" value="" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Crear cuenta">
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
                     
-                    <?php
-                    $enlace = mysqli_connect("localhost", "root", "", "gestionfiat");
-
-                    if (!$enlace) {
-                        echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
-                        echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
-                        echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
-                        exit;
-                    }
-
-                    //echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
-                    //echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
-
-                    $sql = "SELECT * FROM `turnos_registros`";
-                    $resultado = mysqli_query($enlace, $sql);
-                    if(!$resultado) {
-                        echo mysqli_error($enlace);
-                    }else{
-                        //echo "Bien";
-                    }
-                    $cantidad=mysqli_num_rows($resultado);
-
-                    while ($row = mysqli_fetch_assoc($resultado)) {
-                        echo '
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        REGISTRO
-                                    </th>
-                                    <th>
-                                        '.$row["REGISTRO"].'
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        TITULAR
-                                    </td>
-                                    <td>
-                                        '.$row["TITULAR"].'
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        FECHA
-                                    </td>
-                                    <td>
-                                        '.$row["FECHA"].'
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        HORA
-                                    </td>
-                                    <td>
-                                        '.$row["HORA"].'
-                                    </td>
-                                </tr>
-                            </tbody>
-                            
-                        </table>
-                        ';
-                    }
-                    if (($cantidad % 2) != 0) {
-                        echo '
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        REGISTRO
-                                    </th>
-                                    <th>
-                                        
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        TITULAR
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        FECHA
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        HORA
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                </tr>
-                            </tbody>
-                            
-                        </table>
-                        ';
-                    } 
-
-                    mysqli_close($enlace);
-                    ?>
                     <section id="trampa">
                         -
                     </section>
