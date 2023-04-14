@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(inicio)
+		function inicio(){
+			$("select").change(cambiaCss);
+		}
+		function cambiaCss(){
+			var plantilla =$("select option");
+			//console.log(plantilla);
+			//primero busco todos los option y luego filtro los que tienen el atributo selected
+			var plantillaSeleccionada=plantilla.filter(":selected");
+			//console.log(plantillaSeleccionada);
+			var plantillaSeleccionadaValor=plantillaSeleccionada.attr("value");
+			console.log(plantillaSeleccionadaValor);
+			var valor=$("select option").filter(":selected").attr("value");
+
+			//alert(plantilla);
+			//console.log('hola');
+			$("plantilla").html('<link rel="stylesheet" type="text/css" href="EstiloCss/'+valor+'.css">');
+			var miNombre = "Natt";
+			//console.log(miNombre);
+			//console.log($("select"));
+		}
+	</script>
+	<link rel="stylesheet" href="EstiloCss/base.css" type="text/css">
+	<plantilla>
+		<link rel="stylesheet" href="css/pc.css" type="text/css">
+	</plantilla>
+</head>
+<body>
+	<select name="plantilla">
+		<option value="">Selecciona una Plantilla</option>
+		<option value="pc">Selecciona una Pc</option>
+		<option value="hd">Selecciona una Alta Definicion</option>
+		<option value="celular">Selecciona una Celular</option>
+		<option selected value="tablet">Selecciona una Tablet</option>
+		
+	</select>
+	<hr>
+
+	<div id="contenedor">
+		<header>
+			<div id="titulo">
+				<div id="logo">
+			
+				</div>
+				<h1>Natt Techeira</h1>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="Ejercicio 3.html">Inicio</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+					</li>
+					<li>
+						<a href="productos.html">Productos</a>
+					</li>
+					<li>
+						<a href="contacto.html">Contacto</a>
+					</li>
+                </li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<article class="artportafolio" id="porta1">
+                <h3>Titulo del proyecto
+                </h3>
+                <p>Breve descripcion</p>
+				<div id="imagen"></div>
+            </article>
+			<article class="artportafolio" id="porta2">
+                <h3>Titulo del proyecto
+                </h3>
+                <p>Breve descripcion</p>
+            </article>
+			<article class="artportafolio" id="porta3">
+                <h3>Titulo del proyecto
+                </h3>
+                <p>Breve descripcion</p>
+				<div id="imagen"></div>
+            </article>
+			<article class="artportafolio" id="porta4">
+                <h3>Titulo del proyecto
+                </h3>
+                <p>Breve descripcion</p>
+				<div id="imagen"></div>
+            </article>
+		</section>
+		<footer>
+			<h6>(c) 2021 Natt Techeira</h6>
+		</footer>
+	</div>
+	
+		
+
+</body>
+</html>
